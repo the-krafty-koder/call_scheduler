@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_call_scheduler" model="ir.ui.view">
+        <field name="name">Call sheduler</field>
+        <field name="model">call_scheduler.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="group-top">
+                    <group name="group-left">
+                        <field name="contact" />
+                        <field name="subject" />
+                        <field name="call_purpose" />
+
+                    </group>
+                    <group name="group-right">
+                        <field name="call_time" />
+                        <field name="call_result" />
+                        <field name="is_done" />
+
+                        <button type="object" name = "convert_to_lead" class="oe_highlight"  string="Convert to Lead" attrs="{'invisible':[('is_done','=',False)]}"/>
+
+                    </group>
+                </group>
+            </form>
+
+        </field>
+    </record>
+</odoo>

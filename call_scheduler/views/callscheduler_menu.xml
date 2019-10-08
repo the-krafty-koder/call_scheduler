@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <act_window id="action_call_scheduler" name="Call Schedules" res_model="call_scheduler.model"></act_window>
+    <record id="view_list_call_scheduler" model="ir.ui.view">
+        <field name="name">Schedule List</field>
+        <field name="model">call_scheduler.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="contact"/>
+                <field name="subject"/>
+                <field name="call_purpose"/>
+                <field name="call_time"/>
+            </tree>
+        </field>
+    </record>
+    <menuitem id="menu_call_scheduler" name="Call Schedules" action="action_call_scheduler"></menuitem>
+</odoo>
